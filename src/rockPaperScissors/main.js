@@ -9,7 +9,7 @@ library.add(faHandRock, faHandPaper, faHandScissors)
 export const Main = ({ game, setGame, setPlays }) => {
   return (
     <main className='Game'>
-      <l to='/result'>
+      <Link to='/result'>
         <div
           onClick={() => {
             Switch({ game, setGame, setPlays }, "rock")
