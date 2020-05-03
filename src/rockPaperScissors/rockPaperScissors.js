@@ -30,16 +30,16 @@ export const RockPaperScissors = () => {
         <FontAwesomeIcon icon={["fas", "home"]} size='3x' />
       </a>
       <Router className='Title'>
-        <RoundTitle path='/' game={game} />
+        <RoundTitle path='/project00' game={game} />
         <ResultTitle path='/result' plays={plays} />
       </Router>
       <Router className='Main'>
-        <Main path='/' game={game} setGame={setGame} setPlays={setPlays} />
+        <Main path='/project00' game={game} setGame={setGame} setPlays={setPlays} />
         <Result path='/result' plays={plays} />
       </Router>
       <Aside successful={game.successful} draw={game.draw} defeat={game.defeat} />
       <footer className='Reset'>
-        <Link to='/'>
+        <Link to='/project00'>
           <p onClick={() => reset({ game, setGame })}>Reset results</p>
         </Link>
       </footer>

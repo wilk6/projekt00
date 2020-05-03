@@ -10,7 +10,7 @@ export const Result = ({ plays }) => {
         <YourChoose className='YourChoose' plays={plays} />
         <BotChoose plays={plays} />
       </div>
-      <Link to='/'>
+      <Link to='/project00'>
         <aside>
           <p>Play again</p>
         </aside>
