@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face{
+  font-family: Allura-Regular;
+  src:url(.//allura/Allura-Regular.otf);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-family: Allura-Regular;
   }
-  to {
-    transform: rotate(360deg);
+  html,body, #root ,#root>div,  .container,.Nav{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
   }
-}
+  .container{
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr ;
+    grid-template-rows: 0.5fr 1fr 2.5fr 1fr;
+  }
+  h2,p{
+    font-size: 200%;
+  }
+
+
+  /*---------------------------------------Main----------------------------------*/
+  .Main{
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .Game{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+
+  }
+  .Game div{
+    cursor: pointer;
+    display: grid;
+    margin: 1em;
+    height: 13em;
+    width: 13em;
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr
+  }
+  .Game div:hover{
+    box-shadow: 0rem 0rem 1em 1em rgb(87, 86, 86) inset;
+  }
+  .Game div svg{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    place-self: center;
+    height: 50px;
+    width: 50px;
+  }
+  .Game div p{
+    justify-self: center;
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  /* ---------------------------------------Aside------------------------------ */
+  .Result--table{
+    justify-content: space-around;
+    display: flex;
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+  .Result--table span{
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  /* ---------------------------Reset---Title--Back------------------------ */
+  .Title{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    place-self: center;
+  }
+  .Reset{
+    cursor: pointer;
+    grid-row: 4/5;
+    grid-column: 3/4;
+    place-self: end;
+  }
+  .Back{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    place-content: center;
+  }
+  /*------------------------------Result----------------------------------------*/
+  .Result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Result>div{
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+  }
+  .Result>div>div{
+    margin: 1em;
+    height: 13em;
+    width: 13em;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr
+  }
+  .Result div svg{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    place-self: center;
+    height: 50px;
+    width: 50px;
+  }
+  .Result div p{
+    justify-self: center;
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .Result a{
+    flex-basis: 40%;
+    text-align: center;
+    border: 1px solid black;
+  }
+  .Successful{
+    background-color: rgba(124, 207, 0, 0.651);
+  }
+  .Defeat{
+    background-color: rgba(255, 0, 0, 0.596);
+  }
+  .Draw{
+    background-color: rgba(233, 191, 5, 0.774);
+  }
